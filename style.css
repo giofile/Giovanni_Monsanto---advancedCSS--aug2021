@@ -1,0 +1,475 @@
+body {
+  background-color: #c3cfe2;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}
+
+section-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #c3cfe2;
+}
+
+.blok {
+  height: 700px;
+  width: 600px;
+  border: #c3cfe2 solid 2px;
+  background-color: #c3cfe2;
+}
+
+.boven {
+  height: 435px;
+  width: 530px;
+  margin-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 20px 20px 0px 0px;
+  border: solid #c3cfe2 0.001px;
+  background-color: white;
+}
+
+.boven p {
+  font-size: 28px;
+  line-height: 1.7em;
+  color: black;
+  font-weight: 200;
+}
+
+.tekst {
+  margin: 35px;
+}
+
+.afbeelding {
+  width: 150px;
+  height: 150px;
+  margin: 0px;
+  margin-left: 180px;
+  border-radius: 50%;
+  border: 8px solid white;
+  -webkit-box-shadow: 0 0 3px white;
+          box-shadow: 0 0 3px white;
+}
+
+.onder {
+  height: 200px;
+  width: 530px;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 0px 0px 20px 20px;
+  border: solid #c3cfe2 0.001px;
+  background-color: #686de0;
+}
+
+.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  letter-spacing: 0.5em;
+  font-weight: 600;
+}
+
+.site {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  word-spacing: 2em;
+  letter-spacing: 0.3em;
+  color: #c3c3c3;
+}
+
+.portfolio-grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 1000px;
+  background: #c3cfe2;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "h i j" "k l m" "n . .";
+}
+
+.a {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h;
+}
+
+.b {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: i;
+}
+
+.c {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: j;
+}
+
+.d {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: k;
+}
+
+.e {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: l;
+}
+
+.f {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: m;
+}
+
+.g {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: n;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  height: auto;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
+}
+
+.middle {
+  -webkit-transition: 7s ease;
+  transition: 7s ease;
+  opacity: 0;
+  position: absolute;
+  top: 35%;
+  left: 42%;
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.slide ul .blog {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: 500ms width ease;
+  transition: 500ms width ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e17b77;
+  list-style: none;
+}
+
+.slide ul .blog a {
+  opacity: 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  -webkit-transition: 1ms width ease;
+  transition: 1ms width ease;
+}
+
+.slide ul .blog a b {
+  display: inline-block;
+  font-size: 25px;
+}
+
+.slide ul .blog a b p {
+  display: block;
+}
+
+.slide ul .blog:hover {
+  width: 100px;
+  color: white;
+}
+
+.slide ul .blog:hover a {
+  opacity: 1;
+  max-width: 100px;
+  -webkit-transition: max-width 1s ease, opacity 1s ease-out, color 0.2s;
+  transition: max-width 1s ease, opacity 1s ease-out, color 0.2s;
+}
+
+.slide ul .facebook {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: 500ms width ease;
+  transition: 500ms width ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3b5998;
+  list-style: none;
+}
+
+.slide ul .facebook a {
+  opacity: 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  -webkit-transition: 1ms width ease;
+  transition: 1ms width ease;
+}
+
+.slide ul .facebook a b {
+  display: inline-block;
+  font-size: 25px;
+}
+
+.slide ul .facebook a b p {
+  display: block;
+}
+
+.slide ul .facebook:hover {
+  width: 108px;
+  color: white;
+}
+
+.slide ul .facebook:hover a {
+  opacity: 1;
+  max-width: 108px;
+  -webkit-transition: max-width 1s ease, opacity 1s ease-out, color 0.2s;
+  transition: max-width 1s ease, opacity 1s ease-out, color 0.2s;
+}
+
+.slide ul .linkedin {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: 500ms width ease;
+  transition: 500ms width ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #007bb6;
+  list-style: none;
+}
+
+.slide ul .linkedin a {
+  opacity: 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  -webkit-transition: 1ms width ease;
+  transition: 1ms width ease;
+}
+
+.slide ul .linkedin a b {
+  display: inline-block;
+  font-size: 25px;
+}
+
+.slide ul .linkedin a b p {
+  display: block;
+}
+
+.slide ul .linkedin:hover {
+  width: 120px;
+  color: white;
+}
+
+.slide ul .linkedin:hover a {
+  opacity: 1;
+  max-width: 120px;
+  -webkit-transition: max-width 1s ease, opacity 2s ease-out, color 0.2s;
+  transition: max-width 1s ease, opacity 2s ease-out, color 0.2s;
+}
+
+.slide ul .twitter {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: 500ms width ease;
+  transition: 500ms width ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #00aced;
+  list-style: none;
+}
+
+.slide ul .twitter a {
+  opacity: 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  -webkit-transition: 1ms width ease;
+  transition: 1ms width ease;
+}
+
+.slide ul .twitter a b {
+  display: inline-block;
+  font-size: 25px;
+}
+
+.slide ul .twitter a b p {
+  display: block;
+}
+
+.slide ul .twitter:hover {
+  width: 120px;
+  color: white;
+}
+
+.slide ul .twitter:hover a {
+  opacity: 1;
+  max-width: 120px;
+  -webkit-transition: max-width 1s ease, opacity 2s ease-out, color 0.2s;
+  transition: max-width 1s ease, opacity 2s ease-out, color 0.2s;
+}
+
+.slide ul .github {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: 500ms width ease;
+  transition: 500ms width ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  list-style: none;
+}
+
+.slide ul .github a {
+  opacity: 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  -webkit-transition: 1ms width ease;
+  transition: 1ms width ease;
+}
+
+.slide ul .github a b {
+  display: inline-block;
+  font-size: 25px;
+}
+
+.slide ul .github a b p {
+  display: block;
+}
+
+.slide ul .github:hover {
+  width: 115px;
+  color: white;
+}
+
+.slide ul .github:hover a {
+  opacity: 1;
+  max-width: 115px;
+  -webkit-transition: max-width 1s ease, opacity 1s ease-out, color 0.2s;
+  transition: max-width 1s ease, opacity 1s ease-out, color 0.2s;
+}
+
+@media (max-width: 1000px) {
+  .portfolio-grid {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    height: 1000px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "h i" "j k" "l m" "n .";
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    height: 1500px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 10px;
+    -ms-grid-rows: (1fr)[7];
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: "h" "i" "j" "k" "l" "m" "n";
+  }
+}
+/*# sourceMappingURL=style.css.map */

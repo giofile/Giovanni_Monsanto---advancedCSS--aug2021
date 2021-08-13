@@ -1,0 +1,394 @@
+$baseColor: #c3cfe2;
+$neutralColor: white;
+$textColor: black;
+$folderColor: #686de0;
+$siteColor: #c3c3c3;
+$hoverColor: #c33;
+$twitterColor: #00aced;
+$linkedinColor: #007bb6;
+$facebookColor: #3b5998;
+$bloggerColor: #e17b77;
+
+@import "./justifier";
+@import "./display";
+
+body {
+  background-color: $baseColor;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+}
+
+section-1 {
+  @include starter(flex);
+  @include justifier(center);
+  background-color: $baseColor;
+}
+
+.blok {
+  height: 700px;
+  width: 600px;
+  border: $baseColor solid 2px;
+  background-color: $baseColor;
+}
+.boven {
+  height: 435px;
+  width: 530px;
+  margin-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 20px 20px 0px 0px;
+  border: solid $baseColor 0.001px;
+  background-color: $neutralColor;
+  p {
+    font-size: 28px;
+    line-height: 1.7em;
+    color: $textColor;
+    font-weight: 200;
+  }
+}
+.tekst {
+  margin: 35px;
+}
+.afbeelding {
+  width: 150px;
+  height: 150px;
+  margin: 0px;
+  margin-left: 180px;
+  border-radius: 50%;
+  border: 8px solid $neutralColor;
+  box-shadow: 0 0 3px $neutralColor;
+}
+.onder {
+  height: 200px;
+  width: 530px;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 0px 0px 20px 20px;
+  border: solid $baseColor 0.001px;
+  background-color: $folderColor;
+}
+.name {
+  @include starter(flex);
+  @include justifier(center);
+  color: $neutralColor;
+  letter-spacing: 0.5em;
+  font-weight: 600;
+}
+.site {
+  @include starter(flex);
+  @include justifier(center);
+  word-spacing: 2em;
+  letter-spacing: 0.3em;
+  color: $siteColor;
+}
+.portfolio-grid {
+  @include starter(grid);
+  width: 100%;
+  height: 1000px;
+  background: $baseColor;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "h i j"
+    "k l m"
+    "n . .";
+}
+.a {
+  grid-area: h;
+}
+
+.b {
+  grid-area: i;
+}
+
+.c {
+  grid-area: j;
+}
+
+.d {
+  grid-area: k;
+}
+
+.e {
+  grid-area: l;
+}
+
+.f {
+  grid-area: m;
+}
+
+.g {
+  grid-area: n;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  opacity: 1;
+  @include starter(block);
+  height: auto;
+  transition: 2s ease;
+}
+.middle {
+  transition: 7s ease;
+  opacity: 0;
+  position: absolute;
+  top: 35%;
+  left: 42%;
+  text-align: center;
+}
+.container:hover .image {
+  opacity: 0;
+}
+.container:hover .middle {
+  opacity: 1;
+}
+ul {
+  @include starter(flex);
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+// blogger media link
+.slide ul .blog {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  transition: 500ms width ease;
+  @include starter(flex);
+  background-color: $bloggerColor;
+  list-style: none;
+  a {
+    opacity: 0;
+    color: $neutralColor;
+    @include starter(flex);
+    margin: 2px;
+    align-items: center;
+    font-size: 10px;
+    transition: 1ms width ease;
+    b {
+      @include starter(inline-block);
+      font-size: 25px;
+      p {
+        @include starter(block);
+      }
+    }
+  }
+}
+
+.slide ul .blog:hover {
+  width: 100px;
+  color: $neutralColor;
+}
+.slide ul .blog:hover {
+}
+.slide ul .blog:hover a {
+  opacity: 1;
+  max-width: 100px;
+  transition: max-width 1s ease, opacity 1s ease-out, color 0.2s;
+}
+
+// ....facebook media link
+.slide ul .facebook {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  transition: 500ms width ease;
+  @include starter(flex);
+  background-color: $facebookColor;
+  list-style: none;
+  a {
+    opacity: 0;
+    color: $neutralColor;
+    @include starter(flex);
+    margin: 2px;
+    align-items: center;
+    font-size: 10px;
+    transition: 1ms width ease;
+    b {
+      @include starter(inline-block);
+      font-size: 25px;
+      p {
+        @include starter(block);
+      }
+    }
+  }
+}
+
+.slide ul .facebook:hover {
+  width: 108px;
+  color: $neutralColor;
+}
+.slide ul .facebook:hover {
+}
+.slide ul .facebook:hover a {
+  opacity: 1;
+  max-width: 108px;
+  transition: max-width 1s ease, opacity 1s ease-out, color 0.2s;
+}
+// ....linkedin media link
+
+.slide ul .linkedin {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  transition: 500ms width ease;
+  @include starter(flex);
+  background-color: $linkedinColor;
+  list-style: none;
+  a {
+    opacity: 0;
+    color: $neutralColor;
+    @include starter(flex);
+    margin: 2px;
+    align-items: center;
+    font-size: 10px;
+    transition: 1ms width ease;
+    b {
+      @include starter(inline-block);
+      font-size: 25px;
+      p {
+        @include starter(block);
+      }
+    }
+  }
+}
+
+.slide ul .linkedin:hover {
+  width: 120px;
+  color: $neutralColor;
+}
+.slide ul .linkedin:hover {
+}
+.slide ul .linkedin:hover a {
+  opacity: 1;
+  max-width: 120px;
+  transition: max-width 1s ease, opacity 2s ease-out, color 0.2s;
+}
+// ....twitter media link
+.slide ul .twitter {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  transition: 500ms width ease;
+  @include starter(flex);
+  background-color: $twitterColor;
+  list-style: none;
+  a {
+    opacity: 0;
+    color: $neutralColor;
+    @include starter(flex);
+    margin: 2px;
+    align-items: center;
+    font-size: 10px;
+    transition: 1ms width ease;
+    b {
+      @include starter(inline-block);
+      font-size: 25px;
+      p {
+        @include starter(block);
+      }
+    }
+  }
+}
+
+.slide ul .twitter:hover {
+  width: 120px;
+  color: $neutralColor;
+}
+.slide ul .twitter:hover {
+}
+.slide ul .twitter:hover a {
+  opacity: 1;
+  max-width: 120px;
+  transition: max-width 1s ease, opacity 2s ease-out, color 0.2s;
+}
+// ...gtihub media link
+.slide ul .github {
+  float: right;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  transition: 500ms width ease;
+  @include starter(flex);
+  background-color: $textColor;
+  list-style: none;
+  a {
+    opacity: 0;
+    color: $neutralColor;
+    @include starter(flex);
+    margin: 2px;
+    align-items: center;
+    font-size: 10px;
+    transition: 1ms width ease;
+    b {
+      @include starter(inline-block);
+      font-size: 25px;
+      p {
+        @include starter(block);
+      }
+    }
+  }
+}
+
+.slide ul .github:hover {
+  width: 115px;
+  color: $neutralColor;
+}
+.slide ul .github:hover {
+}
+.slide ul .github:hover a {
+  opacity: 1;
+  max-width: 115px;
+  transition: max-width 1s ease, opacity 1s ease-out, color 0.2s;
+}
+
+// media query for tablet , onder 1000px
+@media (max-width: 1000px) {
+  .portfolio-grid {
+    @include starter(grid);
+    width: 100%;
+    height: 1000px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "h i"
+      "j k"
+      "l m"
+      "n .";
+  }
+}
+
+// media query for mobile , onder 600px
+@media (max-width: 600px) {
+  .portfolio-grid {
+    @include starter(grid);
+    width: 100%;
+    height: 1500px;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+      "h"
+      "i"
+      "j"
+      "k"
+      "l"
+      "m"
+      "n";
+  }
+}
